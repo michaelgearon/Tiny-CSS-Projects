@@ -1,0 +1,123 @@
+::selection {
+  /*Colors*/
+  background: rgb(128 128 128);
+  color: rgb(230 230 230)
+}
+
+body {
+  /*Typography*/
+  font-family: 'PT Serif', serif;
+  /*Colors*/
+  background-color: rgb(249 247 241);
+  color: rgb(64 64 64);
+  /*Padding and margin*/
+  padding: 20px
+}
+
+blockquote {
+  /*Typography*/
+  font: 1.8em 'Oswald', sans-serif;
+  line-height: 1.2em;
+  column-span: all;
+  /*Padding and margin*/
+  margin: 0 0 0 5px;
+  padding: 10px;
+}
+
+h1 {
+  /*Typography*/
+  font: 700 4em 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  /*Padding and margin*/
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*Typography*/
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  /*Typography*/
+  font-size: 3em;
+  line-height: 1em;
+  /*Padding and margin*/
+  margin: 10px 0;
+}
+
+h3 {
+  /*Typography*/
+  font-size: 2.4em;
+  line-height: 0.8em;
+  /*Padding and margin*/
+  margin: 0;
+  padding: 0 0 20px;
+}
+
+.time {
+  /*Typography*/
+  font: 700 1.6em 'PT Sans Narrow', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  /*Borders*/
+  border-top: 3px solid rgb(51 51 51);
+  border-bottom: 3px solid rgb(51 51 51);
+  /*Padding and margin*/
+  padding: 12px 0;
+  margin-bottom: 30px;
+}
+
+sup{
+  font-size: 15px;
+}
+
+@media only all and (min-width: 600px) {
+  article {
+    /*Coloumns*/
+    columns: 3;
+    column-gap: 40px;
+    column-rule: 2px outset rgb(68 68 68);
+    /*Typography*/
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+  article h3{
+    /*Coloumns*/
+    break-before: column;
+  }
+  h1 {
+    /*Typography*/
+    font-size: 8em;
+    /*Coloumns*/
+    column-span: all;
+  }
+  .time {
+    column-span: all;
+  }
+  p {
+    /*Typography*/
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    hyphenate-character: "\u2605";
+  }
+}
+
+/*Counter styles*/
+ul{
+ list-style: custom-items;
+}
+
+@counter-style custom-items {
+  system: symbolic;
+  symbols: "i";
+  speak-as: numbers;
+}
