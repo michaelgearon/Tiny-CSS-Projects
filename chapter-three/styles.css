@@ -1,0 +1,134 @@
+body{
+  background: rgb(0 28 47);
+}
+
+/*Container for the loading component*/
+section{
+  /*Layout*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  /*Padding and margin*/
+  margin: 40px auto;
+  /*Typography*/
+  font: 300 100% 'Roboto', sans-serif;
+  text-align: center;
+  /*Color*/
+  color: rgb(255 255 255);
+}
+
+/*Styling the progress bar*/
+progress {
+  /*Reset the browser default styling using the apperance property and set the value to none*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 20px;
+  height: 3vw;
+  width: 100%;
+  background: rgb(26 51 68);
+  border: none;
+}
+
+progress::-moz-progress-bar{
+  /*Border radius*/
+  border-radius: 20px;
+  /*Colors*/
+  background: linear-gradient(to right, #0eb98f 0%,#4db3ff 100%);
+}
+progress::-webkit-progress-bar{
+  /*Border radius*/
+  border-radius: 20px;
+  /*Colors*/
+  background: #0eb98f;
+  background: linear-gradient(to right, #0eb98f 0%,#4db3ff 100%);
+}
+/*Typography*/
+h1{
+  font-size: 4.5vw;
+  /*Padding and margin*/
+  margin: 40px 0 12px;
+}
+
+p{
+  font-size: 2.8vw;
+  /*Padding and margin*/
+  margin-top: 0;
+}
+
+/*Loading bars*/
+svg rect{
+  /*Fill rather than background because it's an SVG graphic*/
+  fill: rgb(34 184 142);
+  animation: scale 2.2s infinite;
+  /*To animate it from the center point use the transform-origin proprty*/
+  transform-origin: center;
+}
+
+svg rect:nth-child(1){
+  /*Delay the animation by 0.2s for each item*/
+  animation-delay: 0;
+  fill: rgb(26 159 140)
+}
+
+svg rect:nth-child(2){
+  animation-delay: 200ms;
+  fill: rgb(30 171 141)
+}
+
+svg rect:nth-child(3){
+  animation-delay: 400ms;
+  fill: rgb(32 179 142)
+}
+
+svg rect:nth-child(4){
+  animation-delay: 600ms;
+  fill: rgb(34 183 141)
+}
+
+svg rect:nth-child(5){
+  animation-delay: 800ms;
+  fill: rgb(34 184 142)
+}
+
+svg rect:nth-child(6){
+  animation-delay: 1s;
+  fill: rgb(33 180 141)
+}
+
+svg rect:nth-child(7){
+  animation-delay: 1.2s;
+  fill: rgb(30 175 142);
+}
+
+svg rect:nth-child(8){
+  animation-delay: 1.4s;
+  fill: rgb(28 164 141);
+}
+
+svg rect:nth-child(9){
+  animation-delay: 1.6s;
+  fill: rgb(23 150 139)
+}
+
+svg rect:nth-child(10){
+  animation-delay: 1.8s;
+  fill: rgb(18 134 136)
+}
+
+svg rect:nth-child(11){
+  animation-delay: 2s;
+  fill: rgb(18 134 136)
+}
+
+/*Create the keyframes, set the starting from position, then at 50% is the smallest amount of the rectangle, then return to full size*/
+@keyframes scale {
+  from {
+    transform: scaleY(1);
+  }
+  50% { 
+    transform: scaleY(0.2);
+  }
+}
