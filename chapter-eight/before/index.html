@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chapter 8 - Designing a virtual credit card</title>
+	<link rel="stylesheet" href="style.css?v=1.0">
+
+</head>
+<body>
+<section class="card-item">
+  
+  <!--Front of the card-->
+  <section class="card-item__side -front">
+    
+    <!--Front of the card top banner-->
+    <div class="card-item__wrapper">
+      <div class="card-item__top">
+        <img src="" class="card-item__chip"> 
+        <div class="card-item__type">
+          <img src="" alt="" class="card-item__typeImg">  
+        </div>
+      </div> 
+      
+      <!--Front of the card long card number-->
+      <label for="cardNumber" class="card-item__number">
+        <div>1111</div>
+        <div>2222</div>
+        <div>3333</div>
+       <div>4444</div>
+      </label> 
+      
+      <!--Front of the card holder name-->
+      <div class="card-item__content">
+        <label for="cardName" class="card-item__info">
+          <div class="card-item__holder">Card Holder</div> 
+          <div class="card-item__name">John Smith</div> 
+        </label> 
+        
+        <!--Front of the card expires date-->
+        <div class="card-item__date">
+          <label for="cardMonth" class="card-item__dateTitle">Expires</label> 
+          <label for="cardMonth" class="card-item__dateItem"><span>02</span></label>
+                  /
+          <label for="cardYear" class="card-item__dateItem"><span>22</span></label>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Back of the card-->
+  <section class="card-item__side -back">
+    <!--Back of the card white band-->
+    <div class="card-item__band"></div> 
+    <div class="card-item__cvv">
+      <div class="card-item__cvvTitle">CVV</div> 
+      <div class="card-item__cvvBand">999</div> 
+      <div class="card-item__type">
+        <img src="" class="card-item__typeImg">
+      </div>         
+    </div>          
+  </section>
+</section>
+</body>
+</html>
