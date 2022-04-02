@@ -1,0 +1,17 @@
+{
+  "name": "tiny-css-ch-6",
+  "description": "Source code for chapter 6 of the Book Tiny CSS Projects",
+  "version": "1.0.0",
+  "license": "SEE LICENSE IN https://www.manning.com/source-code",
+  "homepage": "https://github.com/michaelgearon/Tiny-CSS-Projects#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelgearon/Tiny-CSS-Projects"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8080 -c-1 ./"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}

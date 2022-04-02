@@ -1,0 +1,20 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(206, 194, 174, 0.24);
+  padding: 4rem;
+  font-size: 16px;
+  max-width: 78ch;
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+  border-left: double 5px rgba(0,0,0,.16);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
