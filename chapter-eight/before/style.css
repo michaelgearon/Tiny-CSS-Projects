@@ -3,6 +3,35 @@
 Container
 *
 */
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/open-sans-v28-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v28-latin-regular.woff') format('woff'), /* Modern Browsers */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/open-sans-v28-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v28-latin-800.woff') format('woff'), /* Modern Browsers */
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/open-sans-v28-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v28-latin-italic.woff') format('woff'), /* Modern Browsers */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -24,57 +53,7 @@ Card item container
   height: 270px;
   width: 100%;
   margin: auto;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-  transform-style: preserve-3d;
-}
-
-/*Card item front*/
-.card-item.-active .card-item__side.-front {
-  transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
-}
-
-.card-item__side{
-  background-image: url('https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-}
-
-/*Card item back*/
-.card-item.-active .card-item__side.-back {
-  transform: perspective(1000px) rotateY(0) rotateX(0deg) rotateZ(0deg);
-}
-
-
-.card-item__side {
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px 0 rgb(14 42 90 / 0.55);
-  transform: perspective(2000px) rotateY(0deg) rotateX(0deg) rotate(0deg);
-  transform-style: preserve-3d;
-  transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  height: 100%;
-}
-
-.card-item__side.-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
-  z-index: 2;
-  /*Margin and padding*/
-  padding: 0;
-}
-.card-item__side.-back .card-item__cover {
-  transform: rotateY(-180deg);
-}
-
-.card-item:hover{
-    transform: rotateY(-180deg);
+  color: white;
 }
 
 .card-item__top {
@@ -87,80 +66,8 @@ Card item container
   padding: 0 10px;
 }
 
-.card-item__chip {
-  width: 60px;
-}
-
-.card-item__type {
-  height: 45px;
-  width: 100%;
-  max-width: 100px;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  /*Margin and padding*/
-  margin-left: auto;
-
-}
-
-.card-item__typeImg {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: top right;
-}
-
-.card-item__info {
-  /*Colors*/
-  color: rgb(255 255 255);
-  width: 100%;
-  max-width: calc(100% - 85px);
-  /*Margin and padding*/
-  padding: 10px 15px;
-  font-weight: 500;
-  display: block;
-  cursor: pointer;
-}
-
-.card-item__holder {
-  opacity: 0.7;
-  font-size: 13px;
-  /*Margin and padding*/
-  margin-bottom: 6px;
-}
-
-.card-item__wrapper {
-  font-family: "Source Code Pro", monospace;
-  /*Margin and padding*/
-  padding: 25px 15px;
-  position: relative;
-  height: 100%;
-  text-shadow: 7px 6px 10px rgb(14 42 90 / 0.8);
-  user-select: none;
-}
-
-.card-item__name {
-  font-size: 18px;
-  line-height: 1;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-}
-
-.card-item__nameItem {
-  display: inline-block;
-  min-width: 8px;
-  position: relative;
-}
 .card-item__number {
-  font-weight: 500;
   width: 100%;
-  line-height: 1;
-  /*Colors*/
-  color: rgb(255 255 255);
-  font-size: 27px;
   /*Margin and padding*/
   margin-bottom: 35px;
   padding: 10px 15px;
@@ -169,15 +76,13 @@ Card item container
   justify-content: space-between;
 }
 
-.card-item__number > div {
-  display: inline-block;
-}
-
 .card-item__content {
-  /*Colors*/
-  color: rgb(255 255 255);
   display: flex;
   align-items: flex-start;
+}
+
+.card-item__info {
+  max-width: calc(100% - 85px);
 }
 
 .card-item__date {
@@ -186,32 +91,20 @@ Card item container
   font-size: 18px;
   /*Margin and padding*/
   margin-left: auto;
-  padding: 10px;
   display: inline-flex;
-  width: 80px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.card-item__dateItem {
-  position: relative;
-}
-
-.card-item__dateItem span {
-  width: 22px;
-  display: inline-block;
 }
 
 .card-item__dateTitle {
   opacity: 0.7;
-  font-size: 13px;
-  /*Margin and padding*/
   padding-bottom: 6px;
   width: 100%;
 }
 
-/*Back of the card - white band*/
+.card-item__holder {
+  opacity: 0.7;
+  padding-bottom: 6px;
+}
+
 .card-item__band {
   /*Colors*/
   background: rgb(0 0 19 / 0.8);
@@ -223,7 +116,6 @@ Card item container
   z-index: 2;
 }
 
-/*Back of the card - CVV code*/
 .card-item__cvv {
   text-align: right;
   position: relative;
@@ -231,26 +123,14 @@ Card item container
   padding: 15px;
 }
 
-/*Back of the card */
-.card-item__cvv .card-item__type {
-  opacity: 0.7;
-}
-
 .card-item__cvvTitle {
   /*Margin and padding*/
   padding-right: 10px;
   margin-bottom: 5px;
-  /*Font*/
-  font-size: 15px;
-  font-weight: 500;
-  /*Colors*/
-  color: rgb(255 255 255);
 }
+
 .card-item__cvvBand {
   height: 45px;
-  /*Colors*/
-  background: rgb(255 255 255);
-  color: rgb(26 59 93);
   /*Margin and padding*/
   margin-bottom: 30px;
   padding-right: 10px;
@@ -259,93 +139,17 @@ Card item container
   align-items: center;
   justify-content: flex-end;
   text-align: right;
-  font-size: 18px;
-  border-radius: 4px;
-  box-shadow: 0px 10px 20px -7px rgba(32 56 117 / 0.35);
+    /*Colors*/
+  background: rgb(255 255 255);
+  color: rgb(26 59 93);
+
 }
 
-.card-list {
-  margin-bottom: -130px;
-}
-
-@media screen and (max-width: 480px) {
-  .card-item__band {
-    margin-top: 20px;
-  }
-  .card-item__type {
-    height: 40px;
-    max-width: 90px;
-  }
-  .card-item__holder {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-  .card-item__info {
-    padding: 10px;
-  }
-  .card-item__chip {
-    width: 50px;
-  }
-  .card-item__top {
-    margin-bottom: 25px;
-  }
-  .card-item__wrapper {
-    padding: 20px 10px;
-  }
-  .card-item__name {
-    font-size: 16px;
-  }
-  .card-item {
-    max-width: 310px;
-    height: 220px;
-    width: 90%;
-  }
-  .card-item__number {
-    font-size: 21px;
-    margin-bottom: 15px;
-    padding: 10px 10px;
-  }
-  .card-list {
-    margin-bottom: -120px;
-  }
-  .card-item__cvvBand {
-    height: 40px;
-    margin-bottom: 20px;
-  }
-  .card-item__dateTitle {
-    font-size: 12px;
-    padding-bottom: 5px;
-  }
-  .card-item__date {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 360px) {
-    .card-item__cvvBand {
-    margin-bottom: 15px;
-  }
-    .card-item__cvv {
-    padding: 10px 15px;
-  }
-    .card-item__band {
-    height: 40px;
-    margin-top: 10px;
-  }
-  .card-item {
-    height: 180px;
-  }
-  .card-item__type {
-    height: 30px;
-  }
-  .card-item__chip {
-    width: 40px;
-  }
-    .card-item__top {
-    margin-bottom: 15px;
-  }
-    .card-item__number {
-    font-size: 19px;
-    margin-bottom: 10px;
-    padding: 10px 10px;
-  }
+.card-item__side{
+  background-image: url('https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-color: blue;
+  background-size: cover;
+    backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
 }
