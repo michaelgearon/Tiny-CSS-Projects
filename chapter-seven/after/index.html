@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chapter 7: Creating a shopping cart | Tiny CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <h1>Checkout</h1>
+    <div class="section-container">
+      <section>
+        <h2>My Cart</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Item</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="./img/grapes.jpg" width="75" loading="lazy" alt="Red grapes"></td>
+              <td data-name="Item">Red Grapes, 1lb</td>
+              <td data-name="Unit Price">$ 3.23</td>
+              <td data-name="Quantity">
+                <input name="grapes" type="number" aria-label="Pounds of grape baskets" min="0" max="99" id="grapes"
+                  value="-1" aria-errormessage="grapeError">
+                <p class="error" id="grapeError" role="alert" aria-live="polite">
+                  Must be a whole number between 0 and 99
+                </p>
+              </td>
+              <td data-name="Total">
+                <!-- value calculated & inserted by JS -->
+              </td>
+              <td>
+                <button type="button" class="destructive">
+                  <img width="24" src="./img/icons/remove.svg" alt="remove grapes">
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="./img/pineapple.jpg" width="75" loading="lazy" alt="A Pineapple"></td>
+              <td data-name="Item">Pineapple</td>
+              <td data-name="Unit Price">$ 2.29</td>
+              <td data-name="Quantity">
+                <input name="pineapple" type="number" aria-label="Number of Pineapples" min="0" max="99" id="pineapple"
+                  value="2" aria-errormessage="pineappleError">
+                <p class="error" id="pineappleError" role="alert" aria-live="polite">
+                  Must be a whole number between 0 and 99
+                </p>
+              </td>
+              <td data-name="Total">
+                <!-- value calculated & inserted by JS -->
+              </td>
+              <td>
+                <button type="button" class="destructive">
+                  <img width="24" src="./img/icons/remove.svg" alt="remove pineapples">
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="./img/strawberry.jpg" width="75" loading="lazy" alt="A Strawberry"></td>
+              <td data-name="Item">Strawberries, 1lb</td>
+              <td data-name="Unit Price">$ 4.62</td>
+              <td data-name="Quantity">
+                <input name="strawberries" type="number" aria-label="Pounds of Strawberries" min="0" max="99"
+                  id="strawberries" value="3" aria-errormessage="strawberriesError">
+                <p class="error" id="strawberriesError" role="alert" aria-live="polite">
+                  Must be a whole number between 0 and 99
+                </p>
+              </td>
+              <td data-name="Total">
+                <!-- value calculated & inserted by JS -->
+              </td>
+              <td>
+                <button type="button" class="destructive">
+                  <img width="24" src="./img/icons/remove.svg" alt="remove strawberries">
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th colspan="4" scope="row">Total:</th>
+              <td id="total">
+                <!-- value calculated & inserted by JS -->
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section class="summary">
+        <h2>Summary</h2>
+        <dl>
+          <dt>Number of Items</dt>
+          <dd id="itemQty">
+            <!-- value calculated & inserted by JS -->
+          </dd>
+
+          <dt>Order Total</dt>
+          <dd id="orderTotal">
+            <!-- value calculated & inserted by JS -->
+          </dd>
+
+          <dt>Shipping</dt>
+          <dd>$ 5.00</dd>
+
+          <dt>Total</dt>
+          <dd id="grandTotal"></dd>
+        </dl>
+        <div class="actions">
+          <a href="" type="button" class="button primary">Proceed to Checkout</a>
+          <a href="" type="button" class="button secondary">Continue Shopping</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
