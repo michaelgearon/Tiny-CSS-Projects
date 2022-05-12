@@ -1,0 +1,202 @@
+html {
+  --color: #333333;
+  color: var(--color);
+  --font-family: sans-serif;
+  font-family: var(--font-family);
+
+  --background: #fafafa;
+  --background-card: #fff5dc;
+  --accent: #086788;
+  --accent-contrast: #ffffff;
+  --error: #dd1c1aff;
+  --border: #ddd;
+  --hover: #bee0eb;
+  
+  
+  margin: 0;
+  padding: 0;
+  font-size: 12pt;
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--accent) .75px, transparent .75px);
+  background-size: 15px 15px;
+
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  background: var(--background-card);
+  max-width: 600px;
+  margin: 1rem auto;
+  box-shadow: -2px 2px 15px 0 var(--border);
+  padding: 2rem;
+}
+
+h1 { color: var(--accent); }
+
+fieldset {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+input:not([type="radio"], [type="checkbox"]),
+textarea,
+select {
+  background: var(--background);
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+  border: solid 1px var(--border);
+  border-radius: 32px;
+  padding: 1rem 2rem;
+
+  display: block;
+  width: calc(100% - 4rem);
+}
+
+textarea {
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  /* accent-color: var(--accent);*/
+  
+  appearance: none;
+  background-color: var(--background);
+  
+  display: inline-grid;
+  place-content: center;
+  width: 1.25em;
+  height: 1.25em;
+  border: 0.1875em solid currentColor;
+  margin: 0 .5rem 0 0;
+}
+
+input[type="radio"] { border-radius: 50%; }
+input[type="checkbox"] { border-radius: 4px; }
+
+:where(input[type="radio"], input[type="checkbox"])::before {
+  display: block;
+  content: '';
+  width: 0.625em;
+  height: 0.625em;
+}
+
+input[type="radio"]::before {
+  border-radius: 50%;
+}
+input[type="checkbox"]::before {
+  clip-path: polygon(14% 44%, 0% 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+:is(input[type="radio"], input[type="checkbox"]):checked {
+  border-color: var(--accent);
+}
+
+:where(input[type="radio"], input[type="checkbox"]):hover::before {
+  background: var(--hover);
+}
+
+:where(input[type="radio"], input[type="checkbox"]):checked::before {
+  background: var(--accent);
+}
+
+select {
+  appearance: none;
+  width: 100%;
+
+  background-image: 
+    linear-gradient(225deg, transparent 50%, var(--background) 50%),
+    linear-gradient(135deg, transparent 50%, var(--background) 50%),
+    linear-gradient(var(--accent), var(--accent))
+  ;
+  background-size: 1rem 1rem;
+  background-position: calc(100% - 1rem) calc(50% + .33rem);
+  background-repeat: no-repeat;
+}
+
+label, legend { 
+  display: block;
+  margin: 1rem 0 0 2rem;
+  font-size: .875rem;
+}
+
+fieldset label {
+  margin: .5rem 0 0 2rem;
+}
+
+button {
+  border: none;
+  background: none;
+  border-radius: 36px;
+  padding: 1rem 3rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: solid 1px var(--accent);
+}
+
+button[type="reset"] {
+  color: var(--accent);
+  text-transform: lowercase;
+  border: solid 1px var(--border);
+  box-sizing: border-box;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+
+.error {
+  color: var(--error);
+  margin-left: 2rem;
+  font-weight: bold;
+}
+
+:is(input, textarea).dirty:invalid { border-color: var(--error); }
+.error span { display: none; }
+.error span::before { content: 'Error: '; }
+
+.dirty:invalid + .error span {
+  display: inline;
+}
+
+:focus-visible { 
+  outline: solid 2px var(--accent);
+  outline-offset: -2px;
+}
+.dirty:invalid:focus-visible { outline-color: var(--error); }
+
+:where(input[type="radio"], input[type="checkbox"], button):focus-visible {
+  outline-offset: 2px;
+}
+
+:is(input, input:not([type="radio"], [type="checkbox"]), textarea, select, button):hover {
+  border-color: var(--accent);
+}
+
+@media (forced-colors: active) {
+  :where(input[type="radio"], input[type="checkbox"]):checked::before {
+    background-color: CanvasText;
+  }
+  select {
+    appearance: auto;
+  }
+}
