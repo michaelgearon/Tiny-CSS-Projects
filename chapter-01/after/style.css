@@ -1,110 +1,79 @@
-@namespace svg "http://www.w3.org/2000/";
 
-/*Universal selector example*/
-*{
-  font-family: sans-serif
+/* Namespace */
+@namespace svg "http://www.w3.org/2000/svg";
+
+
+/* Type selector */
+h1, h2, h3, h4, h5, h6{
+  color: crimson;
+ }
+ 
+ /* Class selector */
+.small-heading {
+  text-transform: uppercase;
 }
 
-svg|*{
-  fill: #EDEDED;
+/* ID selector */
+#quote-by-author {
+  background: lightgrey;
+  padding: 10px;
+  line-height: 1.75;
 }
 
-svg{
-  border: 1px solid crimson
+/* Descendant combinator */
+article p {
+  line-height: 2;
 }
 
-body{
-  max-width: 800px;
+/* Child combinator */
+.list > li {
+  color: crimson;
 }
 
-/*Name selector example*/
-h1,h2,h3,h4,h5,h6{
-  color: crimson
-}
-
-/*ID selector example*/
-#quote-by-author{
-  background: crimson;
-  color: white;
-  line-height: 1.8;
-  padding-top: 10px;
-  padding-right: 6px;
-  padding-bottom: 20px;
-  padding-left: 4px
-}
-
-/*Class selector example*/
-.small-heading{
-  text-transform: uppercase
-}
-
-/* Descendant combinator example*/
-article p{
-  line-height: 1.5
-}
-
-/*Adjacent sibling selector*/
-header + p{
-  font-size: 18px;
+/* Adjacent sibling combinator */
+header + p {
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
-/*Styling a link*/
-a:link{
-  color: #1d70b8;
+/* General sibling combinator */
+header ~ img {
+  border: 4px solid crimson;
 }
 
-a:visited{
-  color: #4c2c92
+/* Pseudo Classes */
+a:link {
+  color: #1D70B8;
+}
+a:visited {
+  color: #4C2C92;
+}
+a:hover {
+  color: #003078;
+}
+a:focus {
+ outline: solid 1px crimson;
 }
 
-a:hover{
-  color: #003078
+/* Pseudo Elements */
+
+header + p::first-letter {
+  color: crimson;
+  font-style: italic;
 }
 
-a:focus{
- background-color: #fd0;
- box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
- color: #0b0c0c;
- outline: 3px solid transparent;
- text-decoration: none
-}
-
-a[target="_blank"]:after{
-  content: ' (opens in a new tab)'
-}
-
-/*Child combinator*/
-.list > li{
-  color: crimson
-}
-
-/*Attributor selector*/
-[lang="it"]::before{
+/* Attribute selector + pseudo element */
+[lang="it"]::before {
   content: "🇮🇹"
 }
 
-/*Pseudo-element*/
-header + p::first-letter{
-  color: crimson;
-  float: left;
-  font-size: 75px;
-  line-height: 70px;
-  padding-top: 4px;
-  padding-right: 11px;
-  padding-left: 3px;
+
+/* Universal selector */
+* {
+  font-family: sans-serif;
 }
 
-/*General sibiling selector*/
-header ~ img{
-  border: 4px solid crimson;
-  width: 100%
-}
-
-/*Prefixing*/
-.prevent-selecting{
-  user-select: auto;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none
+/* Universal selector and namespace */
+svg|* {
+  fill: #EDEDED;
 }
