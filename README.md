@@ -2,7 +2,7 @@
 
 * Chapter 1: CSS Introduction
 * Chapter 2: Creating a grid card layout
-* Chapter 3: CSS animations - Creating a responsive loader
+* Chapter 3: Creating a responsive animated loading screen
 * Chapter 4: Creating a responsive web newspaper layout
 * Chapter 5: Clipping and masking in CSS
 * Chapter 6: Profile card

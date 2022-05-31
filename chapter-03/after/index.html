@@ -1,11 +1,12 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Chapter 3 - CSS responsive loader using SVG</title>
+  <title>Chapter 3 - Creating a responsive animated loading screen</title>
 
   <link rel="stylesheet" href="styles.css?v=1.0">
 
@@ -13,26 +14,25 @@
 
 <body>
   <!--Chapter 3 - CSS responsive loader using SVG-->
-<section>
-  <svg viewbox="0 0 660 300" width="100%" height="300px">
-    <!-- 11 rectangles-->
-    <rect width="60" height="300" x="0%" />
-    <rect width="60" height="300" x="10%" />
-    <rect width="60" height="300" x="20%" />
-    <!--Offset each rectangle on the x axis by 10%-->
-    <rect width="60" height="300" x="30%"/>
-    <rect width="60" height="300" x="40%"/>
-    <rect width="60" height="300" x="50%"/>
-    <rect width="60" height="300" x="60%"/>
-    <rect width="60" height="300" x="70%"/>
-    <rect width="60" height="300" x="80%"/>
-    <rect width="60" height="300" x="90%"/>
-    <rect width="60" height="300" x="100%"/>
-  </svg>
-  <h1>Scanning channels</h1>
-  <p>This may take a few minutes</p>
-  <!--Progress bar-->
-  <progress id="file" width="100%" value="32" max="100">32%</progress>
-</section>
+  <section>
+    <svg viewBox="0 0 710 300" width="100%" height="300">
+      <rect width="60" height="300" x="0" />
+      <rect width="60" height="300" x="65" />
+      <rect width="60" height="300" x="130" />
+      <rect width="60" height="300" x="195" />
+      <rect width="60" height="300" x="260" />
+      <rect width="60" height="300" x="325" />
+      <rect width="60" height="300" x="390" />
+      <rect width="60" height="300" x="455" />
+      <rect width="60" height="300" x="520" />
+      <rect width="60" height="300" x="585" />
+      <rect width="60" height="300" x="650" />
+    </svg>
+    <h1>Scanning channels</h1>
+    <p>This may take a few minutes</p>
+    <!--Progress bar-->
+    <progress value="32" max="100">32%</progress>
+  </section>
 </body>
+
 </html>

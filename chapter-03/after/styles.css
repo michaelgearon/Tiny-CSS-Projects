@@ -1,134 +1,152 @@
-body{
-  background: rgb(0 28 47);
+body {
+  background: #001c2e;
 }
 
-/*Container for the loading component*/
-section{
-  /*Layout*/
+/* Container for the loader */
+section {
+  /* Layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   max-width: 800px;
-  /*Padding and margin*/
   margin: 40px auto;
-  /*Typography*/
+
+  /* Typography */
   font: 300 100% 'Roboto', sans-serif;
   text-align: center;
-  /*Color*/
-  color: rgb(255 255 255);
+
+  color: #ffffff;
 }
 
-/*Styling the progress bar*/
+
+h1 {
+  font-size: 4.5vw;
+  /* Typography */
+  margin: 40px 0 12px;
+}
+
+p {
+  font-size: 2.8vw;
+  margin-top: 0;
+}
+
+/* Loader */
+
+rect:nth-child(1) {
+  fill: #1a9f8c;
+  animation-delay: 0ms;
+}
+
+rect:nth-child(2) {
+  fill: #1eab8d;
+  animation-delay: 200ms;
+}
+
+rect:nth-child(3) {
+  fill: #20b38e;
+  animation-delay: 400ms;
+}
+
+rect:nth-child(4) {
+  fill: #22b78d;
+  animation-delay: 600ms;
+}
+
+rect:nth-child(5) {
+  fill: #22b88e;
+  animation-delay: 800ms;
+}
+
+rect:nth-child(6) {
+  fill: #21b48d;
+  animation-delay: 1s;
+}
+
+rect:nth-child(7) {
+  fill: #1eaf8e;
+  animation-delay: 1.2s;
+}
+
+rect:nth-child(8) {
+  fill: #1ca48d;
+  animation-delay: 1.4s;
+}
+
+rect:nth-child(9) {
+  fill: #17968b;
+  animation-delay: 1.6s;
+}
+
+rect:nth-child(10) {
+  fill: #128688;
+  animation-delay: 1.8s;
+}
+
+rect:nth-child(11) {
+  fill: #128688;
+  animation-delay: 2s;
+}
+
+@keyframes scale {
+  from {
+    transform: scaleY(1)
+  }
+
+  50% {
+    transform: scaleY(0.2)
+  }
+
+  to {
+    transform: scaleY(1)
+  }
+}
+
+rect {
+  animation: scale 2.2s infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  rect {
+    animation: none;
+  }
+}
+
+/* Save Version */
 progress {
-  /*Reset the browser default styling using the apperance property and set the value to none*/
+  height: 24px;
+  width: 100%;
+  accent-color: #0eb98f;
+}
+
+/* Experimental Version */
+progress {
+  height: 24px;
+  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius: 20px;
-  height: 3vw;
-  width: 100%;
-  background: rgb(26 51 68);
+  background: linear-gradient(to right, #128688 0%, #4db3ff 100%);
   border: none;
 }
 
-progress::-moz-progress-bar{
-  /*Border radius*/
+::-webkit-progress-value {
   border-radius: 20px;
-  /*Colors*/
-  background: linear-gradient(to right, #0eb98f 0%,#4db3ff 100%);
+  background-color: #7be6e8;
 }
-progress::-webkit-progress-bar{
-  /*Border radius*/
+
+::-webkit-progress-bar {
   border-radius: 20px;
-  /*Colors*/
-  background: #0eb98f;
-  background: linear-gradient(to right, #0eb98f 0%,#4db3ff 100%);
-}
-/*Typography*/
-h1{
-  font-size: 4.5vw;
-  /*Padding and margin*/
-  margin: 40px 0 12px;
+  background: linear-gradient(to right, #128688 0%, #4db3ff 100%);
 }
 
-p{
-  font-size: 2.8vw;
-  /*Padding and margin*/
-  margin-top: 0;
+::-webkit-progress-inner-element {
+  border-radius: 20px;
 }
 
-/*Loading bars*/
-svg rect{
-  /*Fill rather than background because it's an SVG graphic*/
-  fill: rgb(34 184 142);
-  animation: scale 2.2s infinite;
-  /*To animate it from the center point use the transform-origin proprty*/
-  transform-origin: center;
-}
-
-svg rect:nth-child(1){
-  /*Delay the animation by 0.2s for each item*/
-  animation-delay: 0;
-  fill: rgb(26 159 140)
-}
-
-svg rect:nth-child(2){
-  animation-delay: 200ms;
-  fill: rgb(30 171 141)
-}
-
-svg rect:nth-child(3){
-  animation-delay: 400ms;
-  fill: rgb(32 179 142)
-}
-
-svg rect:nth-child(4){
-  animation-delay: 600ms;
-  fill: rgb(34 183 141)
-}
-
-svg rect:nth-child(5){
-  animation-delay: 800ms;
-  fill: rgb(34 184 142)
-}
-
-svg rect:nth-child(6){
-  animation-delay: 1s;
-  fill: rgb(33 180 141)
-}
-
-svg rect:nth-child(7){
-  animation-delay: 1.2s;
-  fill: rgb(30 175 142);
-}
-
-svg rect:nth-child(8){
-  animation-delay: 1.4s;
-  fill: rgb(28 164 141);
-}
-
-svg rect:nth-child(9){
-  animation-delay: 1.6s;
-  fill: rgb(23 150 139)
-}
-
-svg rect:nth-child(10){
-  animation-delay: 1.8s;
-  fill: rgb(18 134 136)
-}
-
-svg rect:nth-child(11){
-  animation-delay: 2s;
-  fill: rgb(18 134 136)
-}
-
-/*Create the keyframes, set the starting from position, then at 50% is the smallest amount of the rectangle, then return to full size*/
-@keyframes scale {
-  from {
-    transform: scaleY(1);
-  }
-  50% { 
-    transform: scaleY(0.2);
-  }
+::-moz-progress-bar {
+  border-radius: 20px;
+  background-color: #7be6e8;
 }

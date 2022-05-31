@@ -1,0 +1,32 @@
+body {
+  background: #001c2e;
+}
+
+/* Container for the loader */
+section {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 40px auto;
+
+  /* Typography */
+  font: 300 100% 'Roboto', sans-serif;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+h1 {
+  font-size: 4.5vw;
+  /* Typography */
+  margin: 40px 0 12px;
+}
+
+p {
+  font-size: 2.8vw;
+  margin-top: 0;
+}
