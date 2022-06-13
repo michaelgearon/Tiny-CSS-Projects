@@ -1,0 +1,137 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  --primary: #de3c4b;
+  --primary-contrast: white;
+  --secondary: #717777;
+  --font: Helvetica, Arial, sans-serif;
+  --text-color: #2D3142;
+  --card-background: white;
+  --page-background: linear-gradient(#4F5D75, #2D3142);
+  --imageSize: 200px;
+
+  background: var(--page-background);
+  font-family: var(--font);
+  color: var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--card-background);
+  box-shadow: 0px 0px 55px rgba(38, 40, 45, .75);
+  width: 75vw;
+  max-width: 500px;
+  border-radius: 4px;
+  text-align: center;
+  margin: calc(var(--imageSize) / 3 + 24px) 24px;
+  background-image: radial-gradient(circle at top, var(--primary) 50%, transparent 50%, transparent);
+  background-repeat: no-repeat;
+  background-size: 1500px 500px;
+  background-position: center -300px;
+  padding: 0 24px 24px;
+}
+
+img {
+  width: var(--imageSize);
+  height: var(--imageSize);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: calc(-1 * var(--imageSize) / 3);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 36px 0 0;
+  color: var(--primary);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+dl {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+dd {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+dl>div {
+  flex-basis: 33%;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+dt {
+  font-size: .75rem;
+}
+
+p.summary {
+  margin: 24px 0;
+  line-height: 1.5;
+}
+
+ul.technologies li {
+  padding: 12px 24px;
+  border-radius: 24px;
+  background: #ffdadd;
+}
+
+ul.technologies {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actions a,
+.actions button {
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: solid 1px var(--primary);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.follow {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.message {
+  background: var(--primary-contrast);
+  color: var(--primary);
+}
+
+*:focus-visible {
+  outline: dotted 1px var(--primary);
+  outline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 36px;
+}
