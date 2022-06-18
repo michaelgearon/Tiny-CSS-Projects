@@ -5,144 +5,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chapter 2 - Creating a grid card layout</title>
+    <title>Chapter 2 - Designing a layout using CSS grids</title>
 
     <link rel="stylesheet" href="style.css?v=1.0">
 
   </head>
 
   <body>
-    <!--Chapter 2 - Creating a grid card layout project-->
-    <section class="container">
-      <!--Toggle-->
-      <label for="darkSwitch">Dark Mode</label>
-      <button role="switch" aria-checked="false" id="darkSwitch" class="switch">
-        <span>off</span>
-        <span>on</span>
-      </button>
-      <!--Cards-->
-      <div class="cards">
+    <main>
+  <header>
+    <img src="https://via.placeholder.com/250x75">
+    <p>Logo for our website</p>
+  </header>
+  <article>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt dapibus eleifend. Nam eu urna ipsum. Etiam consequat ac dolor et dapibus. Duis eros arcu, interdum eu volutpat ac, lacinia a tortor. Vivamus justo tortor, porttitor in
+      arcu nec, pretium viverra ipsum. Nam sit amet nibh magna. Sed ut imperdiet orci, id finibus justo. Maecenas magna mauris, tempor nec tempor id, aliquam et nibh. Nunc elementum ut purus id eleifend. Phasellus pulvinar dui orci, sed eleifend magna
+      ullamcorper sit amet. Proin iaculis lacus congue aliquam sodales.</p>
+    <ol class="ordered-list">
+      <li>List item 1</li>
+      <ul>
+        <li>Nested item 1</li>
+        <li>Nested item 2</li>
+      </ul>
+      <li>List item 2</li>
+      <li>List item 3</li>
+      <li>List item 4</li>
+    </ol>
+    <p>Curabitur id augue nulla. Aliquam purus urna, aliquam eu ornare id, maximus et tellus. Aliquam eleifend sem vitae urna blandit, non bibendum tellus dignissim. Aliquam imperdiet imperdiet sapien sit amet consectetur. Nam convallis turpis felis,
+      sedvulputate lacus eleifend a. Mauris pharetra imperdiet lacinia. Sed sit amet feugiat lectus, in consectetur magna. Vestibulum accumsan porta enim at ultricies. Vestibulum vitae massa quis massa dignissim imperdiet.</p>
 
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/200/animals);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">A summary will also be present. Usually two to three brief sentences about the content on the detail page.</p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
+    <blockquote id="quote-by-author">Nunc eleifend nulla lobortis porta rhoncus. Vivamus feugiat, sem vitae feugiat aliquam, orci nulla venenatis libero, vitae rhoncus nibh neque ac velit.</blockquote>
 
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/640/480/nature);">
-            <span class="card-title">
-              <h3>This is a title for a card that is a bit longer in length</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            Each card is created from an &lt;a&gt; tag so the whole card is linked.
-          </p>
-          <span class="card-meta">Published: June 18th, 2015</span>
-        </a>
+    <p>Etiam tempor vulputate varius. Duis at metus ut eros ultrices facilisis. Donec ut est finibus, egestas nisl eu, placerat neque. Pellentesque cursus, turpis nec sollicitudin sodales, nisi tellus ultrices lectus, nec facilisis purus neque vitae
+      diam. Nunc eleifend nulla lobortis porta rhoncus. Vivamus feugiat, sem vitae feugiat aliquam, orci nulla venenatis libero, vitae rhoncus nibh neque ac velit. Donec non fringilla magna. Vivamus eleifend ligula libero, fermentum imperdiet arcu viverra
+      in. Vivamus pellentesque odio interdum mauris aliquam scelerisque.</p>
 
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/400/people)">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">Using grid is such a an easy, well supported way for grid-style content, such as cards. The cards height will expand to match the longest item.
-          </p>
-          <p class="card-meta">Published: June 18th, 2015</p>
-        </a>
+    <h2>Heading 2</h2>
+    <p>In ac euismod tortor. Vivamus vitae velit efficitur, mattis turpis quis, tincidunt elit.
+      <a target="_blank" href="#">In eleifend in dolor id aliquet</a>. Vivamus pellentesque erat a magna ultricies rhoncus. Vestibulum at mattis purus, non lobortis risus. Mauris porta ullamcorper mollis. Sed et placerat nisi, quis porttitor lacus.
+      Curabitur sagittis nisl egestas ipsum tristique, eu semper erat gravida. Vestibulum sagittis quam sit amet tristique ultricies.
+    </p>
 
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/200/tech);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            A summary will also be present. Usually two to three brief sentences about the content on the detail page.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
+    <p>In id lobortis leo. Nullam commodo tortor eu neque tempus accumsan. Vivamus molestie, felis consequat consequat iaculis, justo massa porttitor tellus, ac suscipit urna erat eu erat. Nunc malesuada eleifend erat nec pharetra. Sed eu magna iaculis,
+      elementum dui ac, sagittis augue. Nam sit amet risus dapibus massa rutrum faucibus. Sed rhoncus finibus magna, vel tristique sem bibendum nec.</p>
+    <h3>Heading 3</h3>
+    <p>Mauris sit amet tempor ex. Morbi eu semper velit. Nullam hendrerit urna pellentesque, interdum lectus volutpat, gravida odio.
+      <a href="#">Sed vulputate eget ante vel vehicula</a>. Curabitur ac velit sed magna malesuada hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut volutpat nisi purus. Morbi venenatis fermentum commodo.
+      Nam accumsan mollis neque non interdum. Aenean cursus metus ac est gravida, placerat interdum justo pellentesque. Duis nec scelerisque lacus, elementum tincidunt est. Maecenas et leo justo. Nam porta risus porttitor vulputate laoreet. Nulla sodales
+      sagittis nulla, non viverra erat consectetur et.
+    </p>
 
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/200/people);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            Each card is created from an &lt;a&gt; tag so the whole card is linked.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
-
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/250/nature);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            Using grid is such a an easy, well supported way for grid-style content, such as cards. The cards height will expand to match the longest item.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
-
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/250/animals);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            A summary will also be present. Usually two to three brief sentences about the content on the detail page.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
-
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/600/600/people);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            Each card is created from an &lt;a&gt; tag so the whole card is linked.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
-
-        <a class="card" href="#">
-          <span class="card-header" style="background-image: url(http://placeimg.com/400/400/tech);">
-            <span class="card-title">
-              <h3>This is a title for a card</h3>
-            </span>
-          </span>
-          <p class="card-summary">
-            Using grid is such a an easy, well supported way for grid-style content, such as cards. The cards height will expand to match the longest item.
-          </p>
-          <p class="card-meta">
-            Published: June 18th, 2015
-          </p>
-        </a>
-      </div>
-    </section>
-    <script src="scripts.js"></script>
+    <p>Quisque vel erat et leo efficitur sollicitudin. Donec id ipsum eget lacus pellentesque consequat. Praesent id justo tellus. Maecenas convallis magna ut diam euismod, et porta lacus lacinia. Sed a placerat justo. Quisque dictum augue quis dapibus
+      posuere. Sed rutrum sed leo eget pretium. Donec fermentum varius vestibulum. Nam ultrices ornare risus, vel malesuada sapien volutpat ac. Duis sit amet leo ut metus dignissim sollicitudin nec eget diam. Nullam tortor erat, tincidunt ut venenatis at,
+      lacinia in libero. Mauris feugiat commodo lectus eget hendrerit. Curabitur pharetra cursus eleifend.</p>
+  </article>
+  <aside>
+    <img src="https://via.placeholder.com/150">
+    <h3>Another article</h3>
+    <p>Quisque vel erat et leo efficitur sollicitudin. Donec id ipsum eget lacus pellentesque consequat. Praesent id justo tellus.</p>
+    <hr />
+    <img src="https://via.placeholder.com/150">
+    <h3>Another article</h3>
+    <p>Quisque vel erat et leo efficitur sollicitudin. Donec id ipsum eget lacus pellentesque consequat. Praesent id justo tellus.</p>
+  </aside>
+  <section class="author-details">
+    <p>Written by author at <time class="article-header--date" datetime="2022-06-17">Jun 17, 2022</time>.</p>
+  </section>
+  <section class="sponsor">
+    <h3>Sponsored advert</h3>
+    <img src="https://via.placeholder.com/150">
+  </section>
+  <footer>
+    <img src="https://via.placeholder.com/250x75">
+    <p>Site created in 2022</p>
+  </footer>
+</main>
   </body>
 </html>
