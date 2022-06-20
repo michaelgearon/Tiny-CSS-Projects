@@ -1,63 +1,65 @@
-main {
+/** Setup **/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff9e8;
+  min-height: 100vh;
   font-family: sans-serif;
-  margin: 20px 0;
+  color: #151412
+}
+
+main { margin: 24px }
+
+img { 
+  float: left; 
+  margin: 12px 12px 12px 0
+}
+
+/* main > * { 
+  border: solid 1px #bfbfbf;
+  padding: 12px;
+} */
+main > *, section { display: flow-root }
+
+p, ul { line-height: 1.5 }
+
+article p span { display: block; }
+article p span:last-of-type,
+article p span:nth-last-child(2) {
+  text-indent: 16px
+}
+
+.plays ul { margin-left: 162px }
+
+/** Creating the grid **/
+
+main {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 2fr)) 250px;
   grid-template-areas:
-    "header header header"
-    "content content sidebar"
-    "content content sponsor"
-    "author . sponsor"
-    "footer footer footer";
+  "header  header  header"
+  "content content author"
+  "content content aside "
+  "plays      .    aside "
+  "footer  footer  footer";
   gap: 20px;
 }
 
-main > * {
-  border: 1px solid #bfbfbf;
-}
+header { grid-area: header }
+article { grid-area: content }
+aside { grid-area: aside }
+.author-details { grid-area: author }
+.plays { grid-area: plays }
+footer { grid-area: footer }
 
-header {
-  grid-area: header;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-article {
-  grid-area: content;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.author-details {
-  grid-area: author;
-}
-
-.sponsor {
-  grid-area: sponsor;
-}
-
-@media (max-width: 800px) {
+@media (min-width: 955px) {
   main {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "header header header"
-      "content content sidebar"
-      "author author sponsor"
-      "footer footer footer";
-  }
-}
-
-@media (max-width: 500px) {
-  main {
-    grid-template-areas:
-      "header header header"
-      "content content content"
-      "sidebar sidebar sidebar"
-      "author author author"
-      "sponsor sponsor sponsor"
-      "footer footer footer";
+    "header  header  header"
+    "content author aside"
+    "content plays aside "
+    "footer  footer  footer";
   }
 }

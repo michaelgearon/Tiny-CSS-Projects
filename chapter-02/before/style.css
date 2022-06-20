@@ -1,7 +1,36 @@
-main {
-  font-family: sans-serif; #A
-  margin: 20px 0; #A
+/** Setup **/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff9e8;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #151412
 }
-main > * {
-  border: 1px solid #bfbfbf;
+
+main { margin: 24px }
+
+img { 
+  float: left; 
+  margin: 12px 12px 12px 0
 }
+
+main > * { 
+  border: solid 1px #bfbfbf;
+  padding: 12px;
+}
+main > *, section { display: flow-root }
+
+p, ul { line-height: 1.5 }
+
+article p span { display: block; }
+article p span:last-of-type,
+article p span:nth-last-child(2) {
+  text-indent: 16px
+}
+
+.plays ul { margin-left: 162px }
+
+
+
