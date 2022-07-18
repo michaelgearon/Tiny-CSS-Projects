@@ -10,6 +10,6 @@
 * Chapter 8: Designing a checkout cart
 * Chapter 9: Designing a virtual credit card
 * Chapter 10: Styling forms
-* Chapter 11: Animated social media share buttons
+* Chapter 11: Animated social media links
 * Chapter 12: Pre-processors
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chapter 11: Animated Social Media Share Links | Tiny CSS Projects</title>
+  <meta name="description" content="Code sample presented in the Styling Forms chapter of the book Tiny CSS projects">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="main">
+    <h1>Animated Social Media Share Links</h1>
+    <div class="share" id="share">
+      <button id="shareButton" class="share__button" type="button" aria-controls="mediaList" aria-expanded="false" aria-haspopup="listbox">
+        <img src="./icons/share.svg" alt="" width="24" height="24">
+        Share
+      </button>
+      <menu aria-labelledby="share" role="menu" id="mediaList" class="share__menu">
+        <li role="menuitem" class="share__menu-item">
+          <a href="mailto:?subject=Tiny%20CSS%20Projects&body=Check%20out%20this%20awesome%20book%3A%20Tiny%20CSS%20Projects%0Ahttps%3A%2F%2Fwww.manning.com%2Fbooks%2Ftiny-css-projects"
+            target="_blank"
+            rel="nofollow noopener"
+            tabindex="-1"
+            class="share__link"
+          >
+            <img src="./icons/email.svg" alt="Email" width="24" height="24">
+          </a>
+        </li>
+        <li role="menuitem" class="share__menu-item">
+          <a href="https://www.facebook.com/sharer.php?u=https://www.manning.com/books/tiny-css-projects"
+            target="_blank"
+            rel="nofollow noopener"
+            tabindex="-1"
+            class="share__link"
+          >
+            <img src="./icons/facebook.svg" alt="Facebook" width="24" height="24">
+          </a>
+        </li>
+        <li role="menuitem" class="share__menu-item">
+          <a href="https://www.linkedin.com/shareArticle?url=https://www.manning.com/books/tiny-css-projects&title=Tiny%20CSS%20Projects"
+            target="_blank"
+            rel="nofollow noopener"
+            tabindex="-1"
+            class="share__link"
+          >
+            <img src="./icons/linkedIn.svg" alt="LinkedIn" width="24" height="24">
+          </a>
+        </li>
+        <li role="menuitem" class="share__menu-item">
+          <a href="https://twitter.com/intent/tweet?url=https://www.manning.com/books/tiny-css-projects&text=Check%20out%20this%20awesome%20book%3A%20Tiny%20CSS%20Projects&via="
+            target="_blank"
+            rel="nofollow noopener"
+            tabindex="-1"
+            class="share__link"
+          >
+            <img src="./icons/twitter.svg" alt="Twitter" width="24" height="24">
+          </a>
+        </li>
+      </menu>
+    </div>
+  </main>
+
+  <script src="./scripts.js"></script>
+  
+</body>
+
+</html>
