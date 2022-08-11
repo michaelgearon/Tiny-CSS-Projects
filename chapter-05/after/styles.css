@@ -15,6 +15,7 @@ h1 {
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0px;
   line-height: 1;
@@ -38,7 +39,7 @@ main > section {
   text-align: center;
   color: whitesmoke;
   border-radius: 4px;
-  background-color: whitesmoke;
+  background-color: #3a8491;
 }
 
 main > section:before {
