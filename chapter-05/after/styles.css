@@ -14,8 +14,11 @@ h1 {
   background: url(https://images.unsplash.com/photo-1648743430927-5a06fe9f8476?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80);
   background-size: cover;
   background-clip: text;
+  /** We go in detail in another chapter - the form one that using prefixed stuff prod is not a good idea - would reiterate the warning in the chapter **/
+  -moz-background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0px;
   line-height: 1;
@@ -89,8 +92,10 @@ div {
   padding: 1rem;
   transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 1;
+  background-color: rgba(0, 0, 0, .75);
 }
 
+/** This will def need an explanation in the chapter -- might be a good place for a container or class? **/
 div > * + * {
   margin-top: 1rem;
 }
@@ -102,25 +107,28 @@ h2 {
 }
 
 p {
-  font: italic 1.125rem "Cardo", serif;
+  /** Cursive fonts are quite hard to read - this is a short bit of text intended to bring you to more details so probably not the end of the world
+  but probably worth a note in the chapter that it's not going to be suitable for large bodies of text **/
+  /** Need to check if we have addressed the font short hand before - if not will need detailed in the chapter **/
+  font: italic 1.125rem "Cardo", cursive;
   line-height: 1.35;
 }
 
 a {
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  color: white;
-  background-color: hsl(39, 100%, 50%);
+  color: rgba(0, 0, 0, .75);
+  background-color: #ffa600;
   text-decoration: none;
   border-radius: 4px;
 }
 
 a:hover {
-  background-color: hsl(39, 100%, 45%);
+  background-color: #e69500;
 }
 
 a:focus {
-  outline: 1px dashed yellow;
+  outline: 1px dashed #e69500;
   outline-offset: 3px;
 }
 
