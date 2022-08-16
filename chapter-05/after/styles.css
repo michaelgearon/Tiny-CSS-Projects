@@ -14,13 +14,13 @@ h1 {
   background: url(https://images.unsplash.com/photo-1648743430927-5a06fe9f8476?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80);
   background-size: cover;
   background-clip: text;
-  /** We go in detail in another chapter - the form one that using prefixed stuff prod is not a good idea - would reiterate the warning in the chapter **/
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0px;
+  color: white;
+  margin-bottom: 20px;
   line-height: 1;
 }
 
@@ -37,30 +37,17 @@ main > section {
   box-sizing: border-box;
   cursor: pointer;
   overflow: hidden;
+  width: 100%;
   padding: 1rem;
-  width: 100%;
   text-align: center;
-  color: whitesmoke;
   border-radius: 4px;
+  color: whitesmoke;
   background-color: #3a8491;
-}
-
-main > section:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
   background-size: cover;
-  background-position: 0 0;
-  transition: transform calc(700ms * 1.5) cubic-bezier(0.19, 1, 0.22, 1);
-  pointer-events: none;
 }
 
-main > section:after {
+main > section::after {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,24 +57,23 @@ main > section:after {
   transition: transform calc(700ms * 2) cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-main > section:nth-child(1):before {
+main > section:nth-child(1) {
   background-image: url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 }
 
-main > section:nth-child(2):before {
+main > section:nth-child(2) {
   background-image: url(https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
 }
 
-main > section:nth-child(3):before {
+main > section:nth-child(3) {
   background-image: url(https://images.unsplash.com/photo-1616064959886-a500e5c38e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 }
 
-main > section:nth-child(4):before {
+main > section:nth-child(4) {
   background-image: url(https://images.unsplash.com/photo-1598598795009-f80c5072e665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
 }
 
 div {
-  position: relative;
   display: grid;
   padding: 1rem;
   transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -95,7 +81,6 @@ div {
   background-color: rgba(0, 0, 0, .75);
 }
 
-/** This will def need an explanation in the chapter -- might be a good place for a container or class? **/
 div > * + * {
   margin-top: 1rem;
 }
@@ -107,20 +92,17 @@ h2 {
 }
 
 p {
-  /** Cursive fonts are quite hard to read - this is a short bit of text intended to bring you to more details so probably not the end of the world
-  but probably worth a note in the chapter that it's not going to be suitable for large bodies of text **/
-  /** Need to check if we have addressed the font short hand before - if not will need detailed in the chapter **/
   font: italic 1.125rem "Cardo", cursive;
   line-height: 1.35;
 }
 
 a {
-  margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   color: rgba(0, 0, 0, .75);
   background-color: #ffa600;
   text-decoration: none;
   border-radius: 4px;
+  height: auto;
 }
 
 a:hover {
@@ -130,56 +112,6 @@ a:hover {
 a:focus {
   outline: 1px dashed #e69500;
   outline-offset: 3px;
-}
-
-/*Media query check to see if the device primary input mechanism can conveniently hover over elements and there is minimum width of 600px*/
-@media (hover: hover) and (min-width: 600px) {
-  main > section:after {
-    transform: translateY(0);
-  }
-
-  div {
-    transform: translateY(calc(100% - 4.5rem));
-  }
-  
-  div > *:not(h2) {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  
-  main > section:hover,
-  main > section:focus-within {
-    align-items: center;
-  }
-  
-  main > section:hover:before,
-  main > section:focus-within:before {
-    transform: translateY(-4%);
-  }
-  
-  main > section:hover:after,
-  main > section:focus-within:after {
-    transform: translateY(-50%);
-  }
-  
-  main > section:hover div,
-  main > section:focus-within div {
-    transform: translateY(0);
-  }
-  
-  main > section:hover div > *:not(h2),
-  main > section:focus-within div > *:not(h2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(700ms / 8);
-  }
-
-  main > section:focus-within:before, section:focus-within:after,
-  main > section:focus-within div,
-  main > section:focus-within div > *:not(h2) {
-    transition-duration: 0s;
-  }
 }
 
 @media (min-width: 600px) {
@@ -194,4 +126,35 @@ a:focus {
   main {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  div {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  
+  div > *:not(h2) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: 700ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  section:hover {
+    align-items: center;
+  }
+  
+  section:hover:after {
+    transform: translateY(-50%);
+  }
+  
+  section:hover div {
+    transform: translateY(0);
+  }
+  
+  section:hover div > *:not(h2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 200ms;
+  }
+
 }
