@@ -48,10 +48,8 @@ body {
   width: 100%;
 }
 
-
-
 /*Front of the card */
-.-front{
+.front{
   padding: 25px 15px;
   height: 100%;
   text-shadow: 7px 6px 10px rgb(14 42 90 / 0.8);
@@ -242,7 +240,7 @@ body {
     transform-style: preserve-3d;
     transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
   }
-  .-back {
+  .back {
     position: absolute;
     top: 0;
     left: 0;
