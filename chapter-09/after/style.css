@@ -68,7 +68,7 @@ body {
   margin-bottom: 2rem;
  }
  
- .-front{
+ .front{
   padding: 25px 15px;
   text-shadow: 7px 6px 10px rgb(14 42 90 / 0.8);
 }
@@ -101,7 +101,7 @@ body {
   padding: 0 15px;
 }
 
-.-back{
+.back{
   padding-top: 30px;
 }
 
@@ -146,7 +146,7 @@ body {
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .-back {
+  .back {
     position: absolute;
     top: 0;
     left: 0;
