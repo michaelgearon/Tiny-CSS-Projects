@@ -1,0 +1,13 @@
+{
+  "name": "tiny-css",
+  "version": "1.0.0",
+  "description": "Chapter 12",
+  "scripts": {
+    "start": "sass --watch before/styles.scss:before/styles.css after/styles.scss:after/styles.css",
+    "build": "sass before/styles.scss:before/styles.css after/styles.scss:after/styles.css"
+  },
+  "author": "Martine Dowden and Michael Gearon",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
