@@ -1,3 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;800&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  max-width: 72ch;
+  margin: 2rem auto;
+}
 
+p {
+  line-height: 1.5;
+}
+
+h1, h2 {
+  color: #063474;
+}
+
+.image-base, img:last-of-type, img:nth-of-type(2), img:first-of-type {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 2rem;
+}
+
+img:first-of-type {
+  border-radius: 20px 100px 10px 20px;
+  object-position: center;
+  float: left;
+  margin-left: 0;
+}
+
+img:nth-of-type(2) {
+  border-radius: 100px 20px 10px 20px;
+  object-position: left top;
+  float: right;
+  margin-right: 0;
+}
+
+img:last-of-type {
+  border-radius: 50px;
+  object-position: center;
+  float: left;
+  margin-left: 0;
+}
+
+a {
+  font-weight: 800;
+}
+a:link, a:visited {
+  color: #063474;
+  text-decoration-style: dotted;
+}
+a:hover {
+  text-decoration-style: dashed;
+}
+a:focus {
+  text-decoration-style: solid;
+  outline: none;
+}
+
+.callout, .error, .warning, .success {
+  border: solid 1px;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.success {
+  background-color: #f6f9d1;
+  border-color: #747d10;
+}
+.success::before {
+  content: "success: ";
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.warning {
+  background-color: #fff1dc;
+  border-color: #fc9d03;
+}
+.warning::before {
+  content: "warning: ";
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.error {
+  background-color: #fcd1d1;
+  border-color: #940a0a;
+}
+.error::before {
+  content: "error: ";
+  text-transform: capitalize;
+  font-weight: 800;
+}
 
 /*# sourceMappingURL=styles.css.map */

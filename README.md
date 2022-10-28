@@ -11,5 +11,5 @@
 * Chapter 9: Designing a virtual credit card
 * Chapter 10: Styling forms
 * Chapter 11: Animated social media links
-* Chapter 12: Pre-processors
+* Chapter 12: [Using Pre-processors](./chapter-12/readme.md)
 

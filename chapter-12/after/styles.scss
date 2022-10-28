@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;800&display=swap');
+
+$primary: #063474;
+$success: #747d10;
+$warning: #fc9d03;
+$error: #940a0a;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  max-width: 72ch;
+  margin: 2rem auto;
+}
+
+p { line-height: 1.5 }
+
+h1, h2 { color: $primary; }
+
+.image-base {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 2rem;
+}
+
+@mixin handle-img($border-radius, $position, $side) {
+  border-radius: $border-radius;
+  object-position: $position;
+  float: $side;
+  margin-#{$side}: 0;
+}
+
+
+img:first-of-type {
+  @extend .image-base;
+  @include handle-img(20px 100px 10px 20px, center, left)
+}
+
+img:nth-of-type(2) {
+  @extend .image-base;
+  @include handle-img(100px 20px 10px 20px, left top, right)
+}
+
+img:last-of-type {
+  @extend .image-base;
+  @include handle-img(50px, center, left);
+}
+
+a {
+  font-weight: 800;
+  &:link, &:visited { 
+    color: $primary;
+    text-decoration-style: dotted;
+  }
+  &:hover { text-decoration-style: dashed;}
+  &:focus { 
+    text-decoration-style: solid; 
+    outline: none;
+  }
+}
+
+.callout {
+  border: solid 1px;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+}
+$callouts: (success: $success, warning: $warning, error: $error);
+@each $type, $color in $callouts {
+  @debug $type, $color;
+  .#{$type} {
+    @extend .callout;
+    background-color: scale-color($color, $lightness: +86%);
+    border-color: $color;
+    &::before {
+      content: "#{$type}: ";
+      text-transform: capitalize;
+      @if $type == 'error' {
+        font-weight: 800
+      } @else {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Equality examples:
+@debug '' == false;             // false
+@debug 'true' == true;          // false
+@debug null == false;           // false
+@debug Verdana == 'Verdana';    // true
+@debug 1cm == 10mm;              // true
+@debug 4 > 5 or 8 > 5;           // true
+@debug 4 > 5 and 8 > 5;          // false
