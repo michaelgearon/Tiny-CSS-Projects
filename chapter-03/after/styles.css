@@ -88,7 +88,7 @@ rect:nth-child(11) {
   animation-delay: 2s;
 }
 
-@keyframes scale {
+@keyframes doScale {
   from {
     transform: scaleY(1)
   }
@@ -103,7 +103,7 @@ rect:nth-child(11) {
 }
 
 rect {
-  animation: scale 2.2s infinite;
+  animation: doScale 2.2s infinite;
   transform-origin: center;
 }
 
