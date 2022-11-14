@@ -12,7 +12,7 @@
   <main>
     <h1>Checkout</h1>
     <div class="section-container">
-      <section>
+      <section class="my-cart">
         <h2>My Cart</h2>
         <table>
           <thead>
@@ -31,11 +31,7 @@
               <td data-name="Item">Red Grapes, 1lb</td>
               <td data-name="Unit Price">$ 3.23</td>
               <td data-name="Quantity">
-                <input name="grapes" type="number" aria-label="Pounds of grape baskets" min="0" max="99" id="grapes"
-                  value="-1" aria-errormessage="grapeError">
-                <p class="error" id="grapeError" role="alert" aria-live="polite">
-                  Must be a whole number between 0 and 99
-                </p>
+                <input name="grapes" type="number" aria-label="Pounds of grape baskets" min="0" max="99" value="1">
               </td>
               <td data-name="Total">
                 <!-- value calculated & inserted by JS -->
@@ -52,11 +48,7 @@
               <td data-name="Item">Pineapple</td>
               <td data-name="Unit Price">$ 2.29</td>
               <td data-name="Quantity">
-                <input name="pineapple" type="number" aria-label="Number of Pineapples" min="0" max="99" id="pineapple"
-                  value="2" aria-errormessage="pineappleError">
-                <p class="error" id="pineappleError" role="alert" aria-live="polite">
-                  Must be a whole number between 0 and 99
-                </p>
+                <input name="pineapple" type="number" aria-label="Number of Pineapples" min="0" max="99" value="2">
               </td>
               <td data-name="Total">
                 <!-- value calculated & inserted by JS -->
@@ -73,11 +65,7 @@
               <td data-name="Item">Strawberries, 1lb</td>
               <td data-name="Unit Price">$ 4.62</td>
               <td data-name="Quantity">
-                <input name="strawberries" type="number" aria-label="Pounds of Strawberries" min="0" max="99"
-                  id="strawberries" value="3" aria-errormessage="strawberriesError">
-                <p class="error" id="strawberriesError" role="alert" aria-live="polite">
-                  Must be a whole number between 0 and 99
-                </p>
+                <input name="strawberries" type="number" aria-label="Pounds of Strawberries" min="0" max="99" value="3">
               </td>
               <td data-name="Total">
                 <!-- value calculated & inserted by JS -->
@@ -93,7 +81,7 @@
           <tfoot>
             <tr>
               <th colspan="4" scope="row">Total:</th>
-              <td id="total">
+              <td colspan="2" id="total">
                 <!-- value calculated & inserted by JS -->
               </td>
             </tr>
@@ -128,7 +116,5 @@
     </div>
   </main>
 </body>
-
 <script src="./script.js"></script>
-
 </html>
