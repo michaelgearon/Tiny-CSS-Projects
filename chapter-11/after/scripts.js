@@ -48,10 +48,12 @@
   function handleToggleButtonKeypress(event) {
     switch(event.key) {
       case 'ArrowDown':
+      case 'ArrowRight':
         if (!expanded) { toggleMenu(); }
         moveToNext();
         break;
       case 'ArrowUp':
+      case 'ArrowLeft':
         if (expanded) { toggleMenu(); }
         break;
     }
@@ -65,9 +67,11 @@
   function handleMenuItemKeypress(event) {
     switch(event.key) {
       case 'ArrowDown':
+      case 'ArrowRight':
         moveToNext();
         break;
       case 'ArrowUp':
+      case 'ArrowLeft':
         if (event.altKey === true) {
           navigate(event);
           toggleMenu();

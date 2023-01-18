@@ -11,7 +11,8 @@ body {
   --secondary: #717777;
   --font: Helvetica, Arial, sans-serif;
   --text-color: #2D3142;
-  --card-background: white;
+  --card-background: #ffffff;
+  --technologies-background: #ffdadd;
   --page-background: linear-gradient(#4F5D75, #2D3142);
   --imageSize: 200px;
 
@@ -26,7 +27,7 @@ body {
 
 .card {
   background-color: var(--card-background);
-  box-shadow: 0px 0px 55px rgba(38, 40, 45, .75);
+  box-shadow: 0 0 55px rgba(38, 40, 45, .75);
   width: 75vw;
   max-width: 500px;
   border-radius: 4px;
@@ -39,7 +40,7 @@ body {
   padding: 0 24px 24px;
 }
 
-img {
+img.portrait {
   width: var(--imageSize);
   height: var(--imageSize);
   object-fit: cover;
@@ -91,7 +92,7 @@ p.summary {
 ul.technologies li {
   padding: 12px 24px;
   border-radius: 24px;
-  background: #ffdadd;
+  background: var(--technologies-background);
 }
 
 ul.technologies {

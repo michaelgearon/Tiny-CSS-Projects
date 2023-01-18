@@ -40,18 +40,19 @@ h1 {
   color: white;
 }
 
-main > section:nth-child(1) {
+.meeru-island {
   background-image: url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 }
-main > section:nth-child(2) {
+.flamingo-beech {
   background-image: url(https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
 }
-main > section:nth-child(3) {
+.protur-safari {
   background-image: url(https://images.unsplash.com/photo-1616064959886-a500e5c38e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 }
-main > section:nth-child(4) {
+.mountain-view {
   background-image: url(https://images.unsplash.com/photo-1598598795009-f80c5072e665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
 }
+
 main > section {
   background-size: cover;
   background-color: #3a8491;
