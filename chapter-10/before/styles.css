@@ -1,0 +1,53 @@
+/* Starting CSS */
+html {
+  --color: #333333;
+  --label-color: #6d6d6d;
+  --placeholder-color: #ababab;
+  --font-family: sans-serif;
+  --background: #fafafa;
+  --background-card: #ffffff;
+  --primary: #e48b17;
+  --accent: #086788;
+  --accent-contrast: #ffffff;
+  --error: #dd1c1aff;
+  --border: #ddd;
+  --hover: #bee0eb;
+  
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--accent) .75px, transparent .75px);
+  background-size: 15px 15px;
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem auto;
+  max-width: 1200px;
+  box-shadow: -2px 2px 15px 0 var(--border);
+}
+
+.image {
+  background-image: url('https://images.unsplash.com/photo-1510442650500-93217e634e4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=991&q=80');
+  background-size: cover;
+  background-position: bottom center;
+  object-fit: contain;
+}
+
+.contact-form {
+  background-color: var(--background-card);
+  padding: 2rem;
+}
+
+h1 { color: var(--accent); }
+
+/* End Starting CSS */

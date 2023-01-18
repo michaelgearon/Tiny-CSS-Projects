@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Chapter 10: Styling Form Fields | Tiny CSS Projects</title>
+  <title>Chapter 10: Styling Form | Tiny CSS Projects</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
@@ -12,54 +12,72 @@
 
 <body>
   <main>
-    <h1>Contact</h1>
+    <section class="image"></section>
+    <section class="contact-form">
+      <h1>Contact</h1>
 
-    <form>
-      <p>Your opinion is important to us. Please fill out all of the fields.</p>
+      <form>
+        <p>Your opinion is important to us. Please fill out all of the fields.</p>
 
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" maxlength="250" required aria-describedby="nameError">
-      <div class="error" id="nameError"><span role="alert">Please let us know who you are</span></div>
+        <label for="name">
+          <img src="./img/name.svg" alt="" width="24" height="24">
+          Your Name
+        </label>
+        <input type="text" id="name" name="name" maxlength="250" required aria-describedby="nameError"
+          placeholder="e.g. Alex Smith">
+        <div class="error" id="nameError"><span role="alert">Please let us know who you are</span></div>
 
-      <label for="email">Your Email Address</label>
-      <input type="email" id="email" name="email" maxlength="250" required aria-describedby="emailError">
-      <div class="error" id="emailError"><span role="alert">Please provide a valid email address</span></div>
+        <label for="email">
+          <img src="./img/email.svg" alt="" width="24" height="24">
+          Your Email Address
+        </label>
+        <input type="email" id="email" name="email" maxlength="250" required aria-describedby="emailError"
+          placeholder="e.g. asmith@email.com">
+        <div class="error" id="emailError"><span role="alert">Please provide a valid email address</span></div>
 
-      <label for="reasonForContact">Reason For Contact</label>
-      <select id="reasonForContact" required>
-        <option value="sales" selected> Sales inquiry</option>
-        <option value="support"> Support request</option>
-        <option value="feedback"> Providing feedback</option>
-        <option value="other"> Other</option>
-      </select>
+        <label for="reasonForContact">
+          <img src="./img/reason.svg" alt="" width="24" height="24">
+          Reason For Contact
+        </label>
+        <select id="reasonForContact" required aria-describedby="reasonError">
+          <option value="">-- Pick One --</option>
+          <option value="sales"> Sales inquiry</option>
+          <option value="support"> Support request</option>
+          <option value="feedback"> Providing feedback</option>
+          <option value="other"> Other</option>
+        </select>
+        <div class="error" id="reasonError"><span role="alert">Please provide the reason for your inquiry</span></div>
 
-      <fieldset>
-        <legend>Are you currently a subscriber?</legend>
-        <label><input type="radio" value="1" name="subscriber" checked required>Yes</label>
-        <label><input type="radio" value="0" name="subscriber" required>No</label>
-      </fieldset>
+        <fieldset>
+          <legend>
+            <img src="./img/subscriber.svg" alt="" width="24" height="24">
+            Are you currently a subscriber?
+          </legend>
+          <label><input type="radio" value="1" name="subscriber" checked required>Yes</label>
+          <label><input type="radio" value="0" name="subscriber" required>No</label>
+        </fieldset>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required maxlength="500"
-        aria-describedby="messageError" ></textarea>
-      <div class="error" id="messageError"><span role="alert">Please let us know how we can help</span></div>
+        <label for="message">
+          <img src="./img/message.svg" alt="" width="24" height="24">
+          Message
+        </label>
+        <textarea id="message" name="message" rows="5" required maxlength="500" aria-describedby="messageError"
+          placeholder="How can we help?"></textarea>
+        <div class="error" id="messageError"><span role="alert">Please let us know how we can help</span></div>
 
+        <label>
+          <input type="checkbox" name="subscribe">Subscribe to our newsletter
+        </label>
 
-      <label>
-        <input type="checkbox" name="subscribe">Subscribe to our newsletter
-      </label>
-
-      <div class="actions">
-        <button type="submit" onclick="send(event)">Send</button>
-        <button type="reset" onclick="setAsPristine()">Reset</button>
-      </div>
-
-    </form>
-
-    <script src="./script.js"></script>
+        <div class="actions">
+          <button type="submit" onclick="send(event)">Send</button>
+        </div>
+      </form>
+    </section>
 
   </main>
 
+  <script src="./script.js"></script>
 </body>
 
 </html>
