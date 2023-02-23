@@ -24,10 +24,3 @@ function send(event) {
   console.log('send');
   event.preventDefault();
 }
-
-function setAsPristine() {
-  console.log('reset');
-  //  remove dirty markers
-  const fields = getAllFieldsAsArray();
-  fields.forEach(input => input.classList.remove('dirty'));
-}
