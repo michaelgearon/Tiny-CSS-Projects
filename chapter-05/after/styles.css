@@ -31,7 +31,7 @@ main {
 h1 {
   font: 900 120px "Rubik", sans-serif;
   text-transform: uppercase;
-  background: url(https://images.unsplash.com/photo-1648743430927-5a06fe9f8476?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80);
+  background: url(bg-img.jpg);
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
@@ -41,16 +41,16 @@ h1 {
 }
 
 .meeru-island {
-  background-image: url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+  background-image: url(1.jpg);
 }
 .flamingo-beech {
-  background-image: url(https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
+  background-image: url(2.jpg);
 }
 .protur-safari {
-  background-image: url(https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
+  background-image: url(3.jpg);
 }
 .mountain-view {
-  background-image: url(https://images.unsplash.com/photo-1598598795009-f80c5072e665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
+  background-image: url(4.jpg);
 }
 
 main > section {
