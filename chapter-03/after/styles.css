@@ -35,7 +35,7 @@ p {
 
 rect:nth-child(1) {
   fill: #1a9f8c;
-  animation-delay: 0ms;
+  animation-delay: 0;
 }
 
 rect:nth-child(2) {
