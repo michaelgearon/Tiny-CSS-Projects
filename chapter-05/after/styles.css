@@ -31,7 +31,7 @@ main {
 h1 {
   font: 900 120px "Rubik", sans-serif;
   text-transform: uppercase;
-  background: url(bg-img.jpg);
+  background: url("bg-img.jpg");
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
@@ -41,16 +41,16 @@ h1 {
 }
 
 .meeru-island {
-  background-image: url(1.jpg);
+  background-image: url("1.jpg");
 }
 .flamingo-beech {
-  background-image: url(2.jpg);
+  background-image: url("2.jpg");
 }
 .protur-safari {
-  background-image: url(3.jpg);
+  background-image: url("3.jpg");
 }
 .mountain-view {
-  background-image: url(4.jpg);
+  background-image: url("4.jpg");
 }
 
 main > section {
