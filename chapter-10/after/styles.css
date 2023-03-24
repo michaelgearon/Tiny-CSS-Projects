@@ -82,7 +82,7 @@ input[type="checkbox"] {
   margin: 0;
   width: 1.75em;
   height: 1.75em;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   display: inline-grid;
   place-content: center;
 }
