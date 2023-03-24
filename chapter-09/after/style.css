@@ -62,7 +62,7 @@ body {
 .card-item__side {
   height: 100%;
   width: 100%;
-  background: url('https://images.unsplash.com/photo-1476445704028-a36e0c798192?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') left top / cover blue;
+  background: url('bg.jpeg') left top / cover blue;
   border-radius: 15px;
   box-shadow: 0 20px 60px 0 rgb(14 42 90 / 0.55);
   margin-bottom: 2rem;
