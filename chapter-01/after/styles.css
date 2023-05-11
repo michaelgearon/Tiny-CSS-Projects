@@ -30,6 +30,10 @@ article p {
   color: crimson;
 }
 
+.list > li ul{
+  color: initial
+}
+
 /* Adjacent sibling combinator */
 header + p {
   font-size: 1.25rem;
